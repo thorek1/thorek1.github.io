@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	    <title>MacroModelling.jl workshop</title>
+	    <link rel="shortcut icon" href="static/img/favicon.ico">
+      <link href='http://fonts.googleapis.com/css?family=Vollkorn|Oswald' rel='stylesheet' type='text/css'>
+	    <style>
+				html {
+					-webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+				}
+	    	body {
+	    		font: 13px/21px 'verdana';
+	    		color: #111;
+	    		margin: 0;
+	    	}
+	    	p{
+					margin: 1em 0;
+	    	}
+	    	a {
+	    		color: #888;
+	    		text-decoration: none;
+	    	}
+	    	a:hover, a:focus {
+	    		color: #111;
+	    		text-decoration: none;
+	    	}
+	    	h1, h2, h3{
+	    		margin: 0 0 1em 0;
+					font: 40px/40px 'verdana', normal;
+	    	}
+	    	h1{
+	    		letter-spacing: -0.5px;
+	    	}
+	    	h2{
+	    		margin: 0.5em 0;
+	    		font-size: 25px;
+	    		line-height: 25px;
+	    	}
+	    	h3 {
+	    		margin: 1em 0;
+	    		font-size: 16px;
+	    		line-height: 16px;
+	    	}
+	    	.row {
+					position: relative;
+	    		margin: 4em 0;
+	    	}
+	    	.center {
+	    		max-width: 800px;
+	    		margin-left: auto;
+	    		margin-right: auto;
+	    		padding: 0 5% 0 5%;
+	    	}
+	    	.box {
+	    		position:relative;
+	    	}
+				.left {
+	    		float: left;
+	    		max-width: 40%;
+	    		padding-right: 5%;
+	    	}
+	    	.right {
+	    		float: right;
+	    		max-width: 50%;
+	    		padding-left: 5%;
+	    	}
+				.picture  {
+					width: 100%;
+				}
+				.text {
+					display: table-cell;
+    			vertical-align: bottom;
+				}
+				.abstract {
+					padding: 0.5em 0;
+          margin: 0 2em 0 2em;
+				}
+	    	.header{
+	    		margin: 10em 0 1em 0;
+	    	}
+	    	.footer{
+	    		margin: 10em 0 2em 0;
+	    	}
+			@media (max-width: 800px) {
+				.row {
+					margin: 3em 0;
+				}
+	    	.header{
+	    		margin: 5em 0 1em 0;
+	    	}
+				.footer{
+					margin: 5em 0 1em 0;
+				}
+
+			}
+			@media (max-width: 600px) {
+				h1, h2, h3{
+	    		margin: 0;
+				}
+				.row {
+					padding: 0.3em 5% 0.3em 5%;
+					margin: 2em 0;
+				}
+				.box{
+					float: none;
+					margin-left: auto;
+					margin-right: auto;
+				}
+	    	.left {
+	    		float: left;
+	    		max-width: 100%;
+	    		padding-right: 0;
+	    	}
+	    	.right {
+	    		float: left;
+	    		max-width: 100%;
+	    		padding-left: 0;
+	    	}
+				.picture  {
+					display: none;
+				}
+				.header{
+	    		margin: 3em 0 1em 0;
+	    	}
+				.footer{
+					margin: 3em 0 1em 0;
+				}
+			}
+		</style>
+	</head>
+  <body>
+    <!--[if lt IE 7]>
+		<p class="chromeframe">You are using an <b>outdated</b> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+		<![endif]-->
+		<!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+		<div class="header row">
+			<div class="center">
+				<!-- <div class="box left">
+					<img class="picture" src="pic_6.jpg">
+				</div> -->
+				<!-- <div class="box right"> -->
+					<h1>MacroModelling.jl workshop</h1>
+					<p align="justify">
+                        Here you can find the materials for the workshop. These include notebooks showing what will be done in each part of the workshop and .jl files with code to start from.
+                    </p>
+				<p align="justify">
+					<br>
+					<br>
+				<h2 id="agenda">Agenda</h2>
+				<ol style="margin-top:0; margin-bottom:0;">
+					<li>Introduction					</li>
+					<li>Policy Applications I</li>
+					<ol style="margin-top:0; margin-bottom:0;">
+						<li>Migrating to MacroModelling.jl and writing models &middot  <a href="./notebooks/2_1_from_dynare_to_MacroModelling.html">Notebook</a> &middot  <a href="./codes/2_1_from_dynare_to_MacroModelling.html">Code</a></li>
+						<li>Changing models (Taylor rule and stochastic volatility) &middot  <a href="./notebooks/2_1_from_dynare_to_MacroModelling.html">Notebook</a> &middot  <a href="./codes/2_1_from_dynare_to_MacroModelling.html">Code</a></li>
+					</ol>
+					<li>Policy Applications II</li>
+					<ol style="margin-top:0; margin-bottom:0;">
+						<li>Conditional Forecasting &middot  <a href="./notebooks/2_1_from_dynare_to_MacroModelling.html">Notebook</a> &middot  <a href="./codes/2_1_from_dynare_to_MacroModelling.html">Code</a></li>
+						<li>Calibration and estimation &middot  <a href="./notebooks/2_1_from_dynare_to_MacroModelling.html">Notebook</a> &middot  <a href="./codes/2_1_from_dynare_to_MacroModelling.html">Code</a></li>
+					</ol>
+					<li>How to request features and contribute</li>
+				  </ol>
+				</p>
+
+
+				<p align="justify">
+					<br>
+					<br>
+			<h2 id="links">Useful links</h2>
+				<ul style="margin-top:0; margin-bottom:0;">
+					<li>MacroModelling.jl </li>
+					<ul style="margin-top:0; margin-bottom:0;">
+						<li><a href="https://github.com/thorek1/MacroModelling.jl">MacroModelling.jl on GitHub</a> </li>
+						<li><a href="http://www.thorekockerols.eu/MacroModelling.jl/stable/">MacroModelling.jl documentation</a> </li>
+					</ul>
+					<li>Julia</li>
+					<ul style="margin-top:0; margin-bottom:0;">
+						<li><a href="https://cheatsheet.juliadocs.org/">Julia documentation: cheatsheet</a> </li>
+
+						<li><a href="https://cheatsheets.quantecon.org/?ref=juliafordatascience.com">MATLAB–Python–Julia cheatsheet</a> </li>
+
+						<li><a href="https://res.cloudinary.com/dyd911kmh/image/upload/v1667400319/Marketing/Blog/Julia_Cheat_Sheet.pdf">Julia Basics cheatsheet</a> </li>
+
+						<li><a href="https://docs.julialang.org/en/v1/manual/noteworthy-differences/#Noteworthy-Differences-from-other-Languages">Julia documentation: Noteworthy Differences from other Languages (MATLAB, R, Python, C++, ...)</a> </li>
+
+						<li><a href="https://docs.julialang.org/en/v1/">Julia documentation</a> </li>
+					</ul>
+				</ul>
+			</p>
+
+        </div>
+			</div>
+			<br style="clear:both;" />
+		</div>
+
+				<div class="footer row">
+					<div class="center" align='center'>
+								<p>&copy; <a href='mailto:mail@thorekockerols.com'>Thore Kockerols</a> 2023</p>
+					</div>
+				</div>
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="static/js/retina.js"></script>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  		ga('create', 'UA-107737410-1', 'auto');
+			ga('require', 'linkid');
+  		ga('send', 'pageview');
+		</script>
+	</body>
+</html>
