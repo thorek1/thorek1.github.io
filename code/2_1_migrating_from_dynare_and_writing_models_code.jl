@@ -172,7 +172,7 @@ Vsparse = spzeros(3)
 
 Msparse = spzeros(3,3)
 
-Vkeyed = KeyedArray(rand(2), Variable = [:K, :Y]);
+Vkeyed = KeyedArray(rand(2), Variable = [:K, :Y])
 
 Mkeyed = KeyedArray(rand(2,2), Variable = [:K, :Y], Shock = [:ϵ, :ε])
 
