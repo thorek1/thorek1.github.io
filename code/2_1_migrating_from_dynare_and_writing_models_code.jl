@@ -8,7 +8,7 @@ Once we downloaded the mod file we start by loading the package:"
 =#
 
 using MacroModelling
-
+using SparseArrays
 
 # Print the current working directory:
 pwd()
