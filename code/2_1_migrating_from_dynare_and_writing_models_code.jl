@@ -2,13 +2,12 @@
 # Policy applications I
 ## Migrating an existing model to MacroModelling.jl from dynare
 
-Let's try to translate the basic new keynesian textbook model from Gali Chapter 3 in it's nonlinear version. We can get the mod file [here](https://github.com/JohannesPfeifer/DSGE_mod/blob/master/Gali_2015/Gali_2015_chapter_3_nonlinear.mod)
+Let's try to translate the basic new keynesian textbook model from Gali Chapter 3 in it's nonlinear version. We can get the mod file [here](http://www.thorekockerols.eu/models/Gali_2015_chapter_3_nonlinear.mod)
 
 Once we downloaded the mod file we start by loading the package:"
 =#
 
 using MacroModelling
-using SparseArrays
 
 
 # Print the current working directory:
@@ -18,23 +17,23 @@ pwd()
 cd()
 
 
-path_to_mod_file = "relative or absolute path to the mod file"
+name_of_mod_file_including_path = "Gali_2015_chapter_3_nonlinear.mod"
 
 # The package includes a function to translate model equations and parameters from a dynare mod file into the format for MacroModelling.jl:
-import_model(path_to_mod_file)
+import_model(name_of_mod_file_including_path)
 
 
 # "Now that we translated the mod file let's compare the two:"
-run(`open $path_to_mod_file`)
+run(`open $name_of_mod_file_including_path`)
 
 
-path_to_jl_file = "relative or absolute path to the newly created jl file"
+name_of_jl_file_including_path = "Gali_2015_chapter_3_nonlinear.jl"
 
-run(`open $path_to_jl_file`)
+run(`open $name_of_jl_file_including_path`)
 
 
 # Let's try to run the model then:
-include(path_to_jl_file)
+include(name_of_jl_file_including_path)
 
 
 # It does not work out of the box. Now have a ook at the error message and see if what is written there applies to the model at hand.
@@ -144,10 +143,10 @@ import StatsPlots
 
 
 # You can export the model as a mod file as well:
-write_mod_file(Name_of_the_model_which_ultimately_worked)
+write_mod_file(Gali_2015_chapter_3_nonlinear_fix)
 
 # which looks like this then:
-path_to_mod_file = "relative or absolute path to the newly created mod file"
+path_to_mod_file = "Gali_2015_chapter_3_nonlinear_fix.mod"
 
 run(`open $path_to_mod_file`)
 
