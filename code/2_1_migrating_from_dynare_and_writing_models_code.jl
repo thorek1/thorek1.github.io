@@ -192,6 +192,8 @@ M[2,2:3]
 
 M[2,2:3] .= 14
 
+# M[2,2:3] = 14 doesnt work
+
 Msparse[1,2] = 10
 
 Msparse

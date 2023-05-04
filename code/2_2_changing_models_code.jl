@@ -484,7 +484,7 @@ Last but not least let's compare it to the NSSS.=#
 
 The factor in front of the shock innovation, σ_nu, becomes a variable:
 
-nu[0] = rho_nu * nu[-1] + σ_nu[0] *eps_nu[x]
+nu[0] = rho_nu * nu[-1] + σ_nu[0] * eps_nu[x]
 
 and this variable is driven by an AR(1) shock process:
 
