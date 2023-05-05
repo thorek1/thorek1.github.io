@@ -200,7 +200,7 @@ end
 #= In the following steps we will get the models view of the state of the euro area given [actual data](http://www.thorekockerols.eu/data/EA_SW_data_growth.csv). Therefore, we first need to load the data and bring it in a suitable format. =#
 
 
-dt = CSV.read("/Users/thorekockerols/GitHub/MacroModellingWorkshop/EA_SW_data_growth.csv", DataFrame)
+dt = CSV.read("EA_SW_data_growth.csv", DataFrame)
 
 
 nms = names(dt)[[2:8...,11]]

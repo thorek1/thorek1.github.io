@@ -157,9 +157,9 @@ get_statistics("<arguments>")[1]
 #= ## Estimation =#
 
 
-#= For the estimation we will first load the data accompanying the Schorfheide (2000) paper. =#
+#= For the estimation we will first load the data accompanying the Schorfheide (2000) paper. You can find it [here](http://www.thorekockerols.eu/data/FS2000_data.csv)=#
 
-dat = CSV.read("/Users/thorekockerols/GitHub/MacroModellingWorkshop/FS2000_data.csv", DataFrame)
+dat = CSV.read("FS2000_data.csv", DataFrame)
 
 data = KeyedArray(Array(dat)',Variable = [:dy_obs,:π_obs],Time = 1:size(dat)[1])
 
