@@ -23,20 +23,16 @@ name_of_mod_file_including_path = "Gali_2015_chapter_3_nonlinear.mod"
 import_model(name_of_mod_file_including_path)
 
 
-# "Now that we translated the mod file let's compare the two:"
-run(`open $name_of_mod_file_including_path`)
+# "Now that we translated the mod file have a look at the original mod file and compared with the translated model."
 
 
+# Let's try to run the model in julia then:
 name_of_jl_file_including_path = "Gali_2015_chapter_3_nonlinear.jl"
 
-run(`open $name_of_jl_file_including_path`)
-
-
-# Let's try to run the model then:
 include(name_of_jl_file_including_path)
 
 
-# It does not work out of the box. Now have a ook at the error message and see if what is written there applies to the model at hand.
+# It does not work out of the box. Now have a look at the error message and see if what is written there applies to the model at hand.
 
 
 

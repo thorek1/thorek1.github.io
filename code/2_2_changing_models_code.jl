@@ -481,7 +481,7 @@ r_Delta_y   = 0.104
 
 
     # Taylor rule
-	log(R[0] / R[ss]) = rho * log(R[-1] / R[ss])  + (1 - rho) * (log(pi_obj[0] / pi_obj[ss]) + r_pi * (log(pi[0] / pi[ss]) - log(pi_obj[0] / pi_obj[ss])) + r_Y * log(Y[0] / Y_f[0]))+ r_Delta_pi * log(pi[0] / pi[-1]) + r_Delta_y * (log(Y[0] / Y[-1]) - log(Y_f[0] / Y_f[-1])) + std_eta_R * eta_R[x] + calibr_pi
+    -calibr_pi + std_eta_R * eta_R[x] - log(R[ss]^-1 * R[0]) + r_Delta_pi * (-log(pi[ss]^-1 * pi[-1]) + log(pi[ss]^-1 * pi[0])) + r_Delta_y * (-log(Y[ss]^-1 * Y[-1]) + log(Y[ss]^-1 * Y[0]) + log(Y_f[ss]^-1 * Y_f[-1]) - log(Y_f[ss]^-1 * Y_f[0])) + rho * log(R[ss]^-1 * R[-1]) + (1 - rho) * (log(pi_obj[0]) + r_pi * (-log(pi_obj[0]) + log(pi[ss]^-1 * pi[-1])) + r_Y * (log(Y[ss]^-1 * Y[0]) - log(Y_f[ss]^-1 * Y_f[0])))
 
 end
 

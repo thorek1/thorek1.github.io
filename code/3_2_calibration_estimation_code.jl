@@ -186,7 +186,7 @@ observables = [:dy_obs, :π_obs]
 calculate_kalman_filter_loglikelihood(FS2000_calib, data, observables; parameters = FS2000_calib.parameter_values)
 
 
-#= Next we define model to estimate including the priors for the parameters. =#
+#= Next we define the Turing model to estimate, including the priors for the parameters. =#
 
 
 Turing.@model function loglikelihood_function(data, m, observables)
@@ -207,31 +207,8 @@ loglikelihood = loglikelihood_function(data, FS2000_calib, observables)
 
 import Turing: NUTS, sample, logpdf
 
+# Finally we estimate the model using the No U-Turn Sampler. THis gradient based sampler is auto-tuning and more robust than the MH sampler.
+
 samps = sample(loglikelihood, NUTS(), 100, progress = true)
 
 samps 
-
-
-#= What is also possible is to include system priors on the standard deviation of some variables: =#
-
-
-Turing.@model function loglikelihood_function_sytem_prior(data, m, observables)
-    σᵐ   ~ InverseGamma(0.01, Inf, μσ = true)
-    σᵃ   ~ InverseGamma(0.01, Inf, μσ = true)
-	R̄    ~ Normal(7, 1, 4, 10)
-	m̄    ~ Normal(1.0002, 0.007)
-	ρ    ~ Beta(0.129, 0.223, μσ = true)
-	ψ    ~ Beta(0.65, 0.05, μσ = true)
-	α    ~ Beta(0.356, 0.02, μσ = true)
-    γ    ~ Normal(0.0085, 0.003)
-    k_y  ~ Normal(10.4, 0.5, 7.0, 13.0)
-	
-	standard_deviations = get_statistics(m, [α, R̄, γ, m̄, ρ, ψ, k_y, σᵃ, σᵐ], parameters = m.parameters, standard_deviation = [:R_ann,:y_gap])[1]
-	
-	Turing.@addlogprob! logpdf(Normal(3.4,.01),standard_deviations[1])
-	Turing.@addlogprob! logpdf(Normal(2.0,.01),standard_deviations[2])
-	
-    Turing.@addlogprob! calculate_kalman_filter_loglikelihood(m, data, observables; parameters = [α, R̄, γ, m̄, ρ, ψ, k_y, σᵃ, σᵐ])
-end
-
-loglikelihood_sytem_prior = loglikelihood_function_sytem_prior(data, FS2000_calib, observables)
