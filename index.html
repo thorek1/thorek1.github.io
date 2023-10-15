@@ -200,6 +200,20 @@ I am a macroeconomist by training with experience in central banking and academi
 						
     					<h3 id="Publications">Publications</h3>
 
+						<p>
+    						<details  style="padding-left:20px;" onclick="ga('send', 'event', 'macromodelling abstract', 'view', 'macromodelling abstract');">
+    							<summary><b> <a href="https://github.com/thorek1/MacroModelling.jl" target="_blank" onclick="ga('send', 'event', 'MacroModelling.jl ', 'download', 'MacroModelling.jl');"><b>MacroModelling.jl</b></a>: A Julia package for developing and solving dynamic stochastic general equilibrium models</b><br>
+								<div style="padding-left:13px;"><a href="https://joss.theoj.org/papers/10.21105/joss.05598">The Journal of Open Source Software (2023)</a></div>
+								
+    							</summary>
+    							<p class="abstract" align='justify'>
+									<a href="https://github.com/thorek1/MacroModelling.jl" target="_blank" onclick="ga('send', 'event', 'MacroModelling.jl ', 'download', 'MacroModelling.jl');">MacroModelling.jl</a> is a Julia (Bezanson et al., 2017) package for developing and solving dynamic stochastic general equilibrium (DSGE) models. These kinds of models describe the behavior of a macroeconomy and are particularly suited for counterfactual analysis (economic policy evaluation) and exploring / quantifying specific mechanisms (academic research).
+The goal of this package is to reduce coding time and speed up model development by providing functions for working with discrete-time DSGE models. The user-friendly syntax, automatic variable declaration, and effective steady state solver facilitate fast prototyping of models. The package includes several pre-defined models from prominent economic papers, providing an immediate starting point for users. The target audience for the package includes central bankers, regulators, graduate students, and others working in academia with an interest in DSGE modelling.
+The package supports programmatic model definition. Once the model is defined, the package finds the solution for the model dynamics knowing only the model equations and parameter values. The model dynamics can be solved for using first, (pruned) second, and (pruned) third-order perturbation solutions (Andreasen et al., 2017; O. Levintal, 2017; Villemot, 2011), leveraging symbolic and automatic differentiation. Furthermore, the package can be used to calibrate parameters, match model moments, and estimate the model on data using the Kalman filter (Durbin & Koopman, 2012). The package is designed to be user-friendly and efficient. Once the functions are compiled and the non-stochastic steady state (NSSS) has been found, the users benefit from fast and convenient functions to generate outputs or change parameters.
+							</p>
+    						</details>
+    					</p>
+
 					<p>
 						<details open style="padding-left:20px;" onclick="ga('send', 'event', 'leaning abstract', 'view', 'leaning abstract');">
 							<summary><b>“Leaning Against the Wind”, Macroprudential Policy and the Financial Cycle</b></a><br>
@@ -217,7 +231,9 @@ I am a macroeconomist by training with experience in central banking and academi
     						<details  style="padding-left:20px;" onclick="ga('send', 'event', 'leaning cycle abstract', 'view', 'leaning cycle abstract');">
     							<summary><b>Leaning against persistent financial cycles with occasional crises</b><br>
 								<div style="padding-left:13px;">with Erling Motzfeldt Kravik, and <a href="https://sites.google.com/view/yasinmimir">Yasin Mimir</a></div>
-								<div style="padding-left:13px;">Latest version: <a href="https://www.esm.europa.eu/system/files/document/2023-04/WP%2056_0.pdf">ESM Working Paper (2023)</a></div>
+								<div style="padding-left:13px;">Latest version: <a href="https://www.esm.europa.eu/system/files/document/2023-04/WP%2056_0.pdf">ESM Working Paper (2023)</a></div> &middot <a href="https://www.suerf.org/suerf-policy-brief/68075/navigating-the-tightrope-balancing-financial-stability-and-inflation-in-the-age-of-persistent-financial-cycles-and-crises">SUERF Policy Brief (2023)</a></div>
+								
+								
 								
     							</summary>
     							<p class="abstract" align='justify'>
