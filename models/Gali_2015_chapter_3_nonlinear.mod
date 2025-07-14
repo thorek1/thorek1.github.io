@@ -1,5 +1,5 @@
 /*
- * This file implements the baseline New Keynesian model of Jordi Galí (2015): Monetary Policy, Inflation,
+ * This file implements the baseline New Keynesian model of Jordi GalÃ­ (2015): Monetary Policy, Inflation,
  * and the Business Cycle, Princeton University Press, Second Edition, Chapter 3
  *
  * Note that this mod-file implements the non-linear first order conditions and that the IRFs show the log-deviations
@@ -11,7 +11,7 @@
  *  - in the LOM for the discount rate shock z the shock enters with a minus sign in this mod-file to generate the 
  *      IRF to a -0.5% shock
  *  - the IRF for the nominal rate in Figure 3.6 "Dynamic Responses to a Technology Shock: Money Supply Rule", p. 81
- *      is wrong. It should be identically 0 as can be seen in this mod-file and Galí's slide set accompanying this chapter
+ * see <https://www.gnu.org/licenses/>.
  *  - For nonlinear models, the proper way to specify standard deviations is in the form 0.01 for 1%. One must not multiply by 
  *      100 here, because the uncertainty correct will be wrong in this case.
  *

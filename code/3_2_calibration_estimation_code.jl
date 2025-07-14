@@ -157,7 +157,7 @@ get_statistics("<arguments>")[1]
 #= ## Estimation =#
 
 
-#= For the estimation we will first load the data accompanying the Schorfheide (2000) paper. You can find it [here](http://www.thorekockerols.eu/data/FS2000_data.csv)=#
+#= For the estimation we will first load the data accompanying the Schorfheide (2000) paper. You can find it [here](https://www.thorekockerols.eu/data/FS2000_data.csv)=#
 
 dat = CSV.read("FS2000_data.csv", DataFrame)
 

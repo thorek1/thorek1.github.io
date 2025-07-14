@@ -2,7 +2,7 @@
 # Policy applications I
 ## Migrating an existing model to MacroModelling.jl from dynare
 
-Let's try to translate the basic new keynesian textbook model from Gali Chapter 3 in it's nonlinear version. We can get the mod file [here](http://www.thorekockerols.eu/models/Gali_2015_chapter_3_nonlinear.mod)
+Let's try to translate the basic new keynesian textbook model from Gali Chapter 3 in it's nonlinear version. We can get the mod file [here](https://www.thorekockerols.eu/models/Gali_2015_chapter_3_nonlinear.mod)
 
 Once we downloaded the mod file we start by loading the package:"
 =#
@@ -128,7 +128,7 @@ end
 end
 
 
-# Once the necessary modifications are done you can go on and get the steady state. Check the documentation for the relevant function: http://www.thorekockerols.eu/MacroModelling.jl/stable/call_index/
+# Once the necessary modifications are done you can go on and get the steady state. Check the documentation for the relevant function: https://www.thorekockerols.eu/MacroModelling.jl/stable/call_index/
 
 
 
