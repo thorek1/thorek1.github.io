@@ -1,0 +1,134 @@
+html {
+    -webkit-text-size-adjust: 100%;
+}
+body {
+    font: 13px/21px 'verdana';
+    color: #111;
+    margin: 0;
+}
+p {
+    margin: 1em 0;
+}
+a {
+    color: #888;
+    text-decoration: none;
+}
+a:hover, a:focus {
+    color: #111;
+    text-decoration: none;
+}
+h1, h2, h3 {
+    margin: 0 0 1em 0;
+    font: 40px/40px 'verdana', normal;
+}
+h1 {
+    letter-spacing: -0.5px;
+}
+h2 {
+    margin: 0.5em 0;
+    font-size: 25px;
+    line-height: 25px;
+}
+h3 {
+    margin: 1em 0;
+    font-size: 16px;
+    line-height: 16px;
+}
+.row {
+    position: relative;
+    margin: 4em 0;
+}
+.center {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 5% 0 5%;
+}
+.box {
+    position: relative;
+}
+.left {
+    float: left;
+    max-width: 40%;
+    padding-right: 5%;
+}
+.right {
+    float: right;
+    max-width: 50%;
+    padding-left: 5%;
+}
+.picture {
+    width: 100%;
+}
+.text {
+    display: table-cell;
+    vertical-align: bottom;
+}
+.abstract {
+    padding: 0.5em 0;
+    margin: 0 2em 0 2em;
+}
+.header {
+    margin: 10em 0 1em 0;
+}
+.footer {
+    margin: 10em 0 2em 0;
+}
+.navbar {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+.contact-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+.contact-list span {
+    white-space: nowrap;
+}
+@media (max-width: 800px) {
+    .row {
+        margin: 3em 0;
+    }
+    .header {
+        margin: 5em 0 1em 0;
+    }
+    .footer {
+        margin: 5em 0 1em 0;
+    }
+}
+@media (max-width: 600px) {
+    h1, h2, h3 {
+        margin: 0;
+    }
+    .row {
+        padding: 0.3em 5% 0.3em 5%;
+        margin: 2em 0;
+    }
+    .box {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .left {
+        float: left;
+        max-width: 100%;
+        padding-right: 0;
+    }
+    .right {
+        float: left;
+        max-width: 100%;
+        padding-left: 0;
+    }
+    .picture {
+        display: none;
+    }
+    .header {
+        margin: 3em 0 1em 0;
+    }
+    .footer {
+        margin: 3em 0 1em 0;
+    }
+}
