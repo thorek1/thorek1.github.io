@@ -114,7 +114,30 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+            <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                            var externalLinks = document.querySelectorAll('a[href^="http"]');
+                            externalLinks.forEach(function (link) {
+                                    var linkUrl;
+                                    try {
+                                            linkUrl = new URL(link.href);
+                                    } catch (error) {
+                                            return;
+                                    }
+
+                                    if (linkUrl.hostname !== window.location.hostname) {
+                                            link.setAttribute('target', '_blank');
+
+                                            var relValue = link.getAttribute('rel') || '';
+                                            if (!/\bnoopener\b/.test(relValue)) {
+                                                    relValue = (relValue + ' noopener').trim();
+                                                    link.setAttribute('rel', relValue);
+                                            }
+                                    }
+                            });
+                    });
+            </script>
+            <script type="text/javascript" src="https://www.google.com/jsapi"></script>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
             <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="static/js/retina.js"></script>
